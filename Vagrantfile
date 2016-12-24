@@ -1,16 +1,3 @@
-# Script | Ubuntu | System Configuration
-
-[![License](https://img.shields.io/github/license/odaceo/script-ubuntu-system.svg)](LICENSE)
-
-## Description
-
-Bash script for configuring your system on Ubuntu.
-
-## Provisioning Vagrant machine
-
-To provision a Vagrant machine use the following ``Vagrantfile``:
-
-``` shell
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -36,22 +23,5 @@ Vagrant.configure(2) do |config|
     echo "export SYSTEM_LOCALE=en_US.UTF-8"                         | tee -a ~/.bash_profile
     echo "export SYSTEM_TIMEZONE=Europe/Zurich"                     | tee -a ~/.bash_profile
   SHELL
-  config.vm.provision "shell", privileged: false, path: "https://raw.githubusercontent.com/odaceo/script-ubuntu-system/xenial64/install.sh"
+  config.vm.provision "shell", privileged: false, path: "install.sh"
 end
-```
-
-## Reporting Issues
-
-Issues can be reported at [https://github.com/odaceo/script-ubuntu-system/issues](https://github.com/odaceo/script-ubuntu-system/issues)
-
-## Source code
-
-The source code is available at [https://github.com/odaceo/script-ubuntu-system](https://github.com/odaceo/script-ubuntu-system)
-
-## License
-
-All the source code is distributed under [ASL 2.0](LICENSE).
-
-## Copyright
-
-© 2016 [Odaceo](http://odaceo.ch). All rights reserved.
