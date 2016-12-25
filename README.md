@@ -1,10 +1,10 @@
-# Script | Ubuntu | System Configuration
+# Script | Ubuntu | System Settings
 
 [![License](https://img.shields.io/github/license/odaceo/script-ubuntu-system.svg)](LICENSE)
 
 ## Description
 
-Bash script for configuring your system on Ubuntu.
+Bash script for configuring system settings on Ubuntu.
 
 ## Provisioning Vagrant machine
 
