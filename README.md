@@ -30,13 +30,9 @@ Vagrant.configure(2) do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", privileged: false, inline: <<-SHELL
-    sed -i '/^export SYSTEM_/ d' ~/.bash_profile
-    echo "export SYSTEM_FQDN=vagrant.dev.doaceo.ch"                 | tee -a ~/.bash_profile
-    echo "export SYSTEM_LOCALE=en_US.UTF-8"                         | tee -a ~/.bash_profile
-    echo "export SYSTEM_TIMEZONE=Europe/Zurich"                     | tee -a ~/.bash_profile
-  SHELL
-  config.vm.provision "shell", privileged: false, path: "https://raw.githubusercontent.com/odaceo/script-ubuntu-system/xenial64/install.sh"
+  config.vm.provision "shell", privileged: false, 
+    path: "https://raw.githubusercontent.com/odaceo/script-ubuntu-system/xenial64/install.sh",
+    args: ["vagrant.dev.doaceo.ch", "en_US.UTF-8", "Europe/Zurich"]
 end
 ```
 
