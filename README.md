@@ -1,4 +1,4 @@
-# Script | Ubuntu | System Settings
+# Script :: Ubuntu :: System Settings
 
 [![License](https://img.shields.io/github/license/odaceo/script-ubuntu-system.svg)](LICENSE)
 
